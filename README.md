@@ -4,7 +4,7 @@ Install [pipenv](https://pipenv.readthedocs.io/en/latest/) (see below). Inside t
 pipenv sync
 ```
 
-Then, open the project in PyCharm and it should automatically use the python version specified via pipenv. Or, clone the repo inside PyCharm (url: `https://marshallpierce@bitbucket.org/marshallpierce/cs136-template.git`) and it should invoke pipenv to set up the virtualenv and python version for you.
+Then, open the project in PyCharm and it should automatically use the python version specified via pipenv. Or, clone the repo inside PyCharm (url: `https://bitbucket.org/marshallpierce/cs136-template.git`) and it should invoke pipenv to set up the virtualenv and python version for you.
 
 # Running scripts on the command line
 
