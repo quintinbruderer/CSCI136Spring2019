@@ -14,7 +14,7 @@ from pathfinder import PathFinder
 # destination vertex from standard input, and write the shortest path
 # from the source index to the destination index.
 
-ommand-line arguments file, delimiter, and s. The file 
+# Command-line arguments file, delimiter, and s. The file
 # contains a graph expressed using delimiter Read data from
 # file to create a graph
 file = sys.argv[1]
