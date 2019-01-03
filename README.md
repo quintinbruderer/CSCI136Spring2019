@@ -1,3 +1,5 @@
+# Setup
+
 Install [pipenv](https://pipenv.readthedocs.io/en/latest/) (see below). Inside this project's directory, run:
 
 ```
@@ -6,9 +8,9 @@ pipenv sync
 
 Then, open the project in PyCharm and it should automatically use the python version specified via pipenv. Or, clone the repo inside PyCharm (url: `https://bitbucket.org/marshallpierce/cs136-template.git`) and it should invoke pipenv to set up the virtualenv and python version for you.
 
-Open PyCharm's Preferences window and go to Project Structure. Click the `src` directory and click the "Mark As: Sources" button (in blue) so that PyCharm knows that's where your source code lives.
+Open PyCharm's Preferences window and go to Project Structure. For the `src`, `booksite/examples`, and `booksite/stdlib` directories, select the directory and click the "Mark As: Sources" button (in blue) so that PyCharm knows that's where source code resides.
 
-# Running scripts on the command line
+## Running scripts on the command line
 
 Use `pipenv run` to run one-off commands, like this:
 
@@ -23,6 +25,38 @@ pipenv shell
 ```
 
 This will drop you into a subshell, at which point you could run `python --version` to see that you have the right python version, etc.
+
+## Module structure
+
+PyCharm should be set up (as per above) with the right source roots, but when running `python` from the command line, it does not have that info, so you will need to provide it. A reasonable way to do this that doesn't require any permanent configuration changes (which are best avoided as they might conflict with other python projects you have) is to set the `PYTHONPATH` environment variable. This is an environment variable that `python` reads when it starts up to know where to import modules from.
+
+You can set any environment variable for one shell command by prefixing the command with `VARNAME=value`.
+
+As an example, the `date` command will honor the `TZ` variable (for "time zone"), so you could see the date in `America/Los_Angeles` with
+
+```
+TZ=America/Los_Angeles date
+```
+
+or in UTC with
+
+```
+TZ=UTC date
+```
+
+We can use this mechanism to set `PYTHONPATH` for a `python` command. The directories we want to include are `src` and `booksite/stdlib`, so an example python invocation would be:
+
+```
+PYTHONPATH=src:booksite/stdlib python booksite/examples/harmonicf.py 1 2 3 4
+```
+
+The paths (separated with a colon `:`) in `PYTHONPATH` are relative paths, so you will need to adjust them accordingly if you don't run `python` from the root directory of this repo.
+
+Also note that we run `python` directly, which implies that we're already in the subshell created with `pipenv shell` that sets up the correct Python version, etc. If not in the subshell, use `pipenv run python` instead of just `python`.
+
+# Textbook code
+
+The example programs and the stdlib are already included in this repo; the example data files are not since it's a bit large (>300MiB). You can download the data from the ["booksite"](https://introcs.cs.princeton.edu/python/code/index.php).
 
 # Installing pipenv
 
