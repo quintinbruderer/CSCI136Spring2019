@@ -6,6 +6,8 @@ pipenv sync
 
 Then, open the project in PyCharm and it should automatically use the python version specified via pipenv. Or, clone the repo inside PyCharm (url: `https://bitbucket.org/marshallpierce/cs136-template.git`) and it should invoke pipenv to set up the virtualenv and python version for you.
 
+Open PyCharm's Preferences window and go to Project Structure. Click the `src` directory and click the "Mark As: Sources" button (in blue) so that PyCharm knows that's where your source code lives.
+
 # Running scripts on the command line
 
 Use `pipenv run` to run one-off commands, like this:
