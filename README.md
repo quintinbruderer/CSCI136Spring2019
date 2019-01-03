@@ -1,6 +1,8 @@
 # What's this?
 
-A starter project for students in University of Montana's CS 136.
+A starter repo for students in University of Montana's CS 136.
+
+Students can clone this repo and write programs as needed for homework.
 
 ## Directory structure
 
@@ -11,25 +13,47 @@ A starter project for students in University of Montana's CS 136.
 
 # Setup
 
+## Python
 Install Python 3.7. 
 
 - If you’re using a popular Linux distro (Ubuntu, etc) or macOS, install python 3.7 from the package manager.
     - Ubuntu: `sudo apt-get install python3.7 python3-pip python3-tk`
+        - Other linux distros should have a similar equivalent.
     - macOS [MacPorts](https://www.macports.org/): `sudo port install python37 py37-pip py37-tkinter`
     - Otherwise, download [Miniconda](https://conda.io/miniconda.html) 
-- Linux or macOS are suggested. Windows is not well suited for use as a development environment, so if you’re currently using Windows, you will probably want to dual-boot into Linux or use a VM.
+- Linux or macOS are suggested. Windows is not well suited for use as a development environment, so if you’re currently using Windows, you will probably want to dual-boot into Linux (Ubuntu is a good default choice) or use a VM like the one provided here (see below).
 
-Install [pipenv](https://pipenv.readthedocs.io/en/latest/) (see below). Inside this project's directory, run:
+## Pipenv
+
+See detailed instructions below under "Installing pipenv".
+
+## Clone the repo (command line)
+
+If you're comfortable using the command line, clone the repository with `git`:
+
+```
+git clone https://bitbucket.org/marshallpierce/cs136-template.git
+```
+
+This will create a directory called `cs136-template`, but that's just `git` defaulting to using the name of the repository. You can rename the directory to something else if you like.
+
+Once inside the resulting directory, run:
 
 ```
 pipenv sync
 ```
 
-Then, open the project in PyCharm and it should automatically use the python version specified via pipenv. Or, clone the repo inside PyCharm (url: `https://bitbucket.org/marshallpierce/cs136-template.git`) and it should invoke pipenv to set up the virtualenv and python version for you.
+Then, open the project in PyCharm and it should automatically use the python version specified via pipenv.
+
+## Clone the repo (PyCharm)
+
+Clone the repo inside PyCharm (url: `https://bitbucket.org/marshallpierce/cs136-template.git`) and it should invoke pipenv to set up the virtualenv and python version for you.
+
+## Configure PyCharm
 
 Open PyCharm's Preferences window and go to Project Structure. For the `src`, `booksite/examples`, and `booksite/stdlib` directories, select the directory and click the "Mark As: Sources" button (in blue) so that PyCharm knows that's where source code resides.
 
-## Running scripts on the command line
+# Running scripts on the command line
 
 Use `pipenv run` to run one-off commands, like this:
 
@@ -76,6 +100,12 @@ Also note that we run `python` directly, which implies that we're already in the
 # Textbook code
 
 The example programs and the stdlib are already included in this repo; the example data files are not since it's a bit large (>300MiB). You can download the data from the ["booksite"](https://introcs.cs.princeton.edu/python/code/index.php).
+
+## Graphics demos and Tkinter
+
+For various boring reasons, code that tries to display graphics (using Python's Tk integration "Tkinter") is unlikely to work unless running on Linux. If you want to see demos that use graphics and it's not working for you, try setting up the provided VM (see below) and running them from there. 
+
+Because doing graphics with Tk is generally painful, we will avoid graphics as much as practical in this class.
 
 # Installing pipenv
 
