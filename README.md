@@ -11,6 +11,14 @@ A starter project for students in University of Montana's CS 136.
 
 # Setup
 
+Install Python 3.7. 
+
+- If you’re using a popular Linux distro (Ubuntu, etc) or macOS, install python 3.7 from the package manager.
+    - Ubuntu: `sudo apt-get install python3.7 python3-pip python3-tk`
+    - macOS [MacPorts](https://www.macports.org/): `sudo port install python37 py37-pip py37-tkinter`
+    - Otherwise, download [Miniconda](https://conda.io/miniconda.html) 
+- Linux or macOS are suggested. Windows is not well suited for use as a development environment, so if you’re currently using Windows, you will probably want to dual-boot into Linux or use a VM.
+
 Install [pipenv](https://pipenv.readthedocs.io/en/latest/) (see below). Inside this project's directory, run:
 
 ```

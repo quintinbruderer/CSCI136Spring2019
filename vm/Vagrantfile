@@ -69,7 +69,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
     apt-get upgrade -y
-    apt-get install -y firefox ubuntu-desktop python3.7 python3-pip
+    apt-get install -y firefox ubuntu-desktop python3.7 python3-pip python3-tk
     mkdir -p ~vagrant/local
     chown vagrant:vagrant ~vagrant/local
     curl -sL https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.12.4481.tar.gz | su vagrant -c 'tar -C ~vagrant/local -xzf -'
