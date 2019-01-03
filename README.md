@@ -21,7 +21,7 @@ Install Python 3.7.
         - Other linux distros should have a similar equivalent.
     - macOS [MacPorts](https://www.macports.org/): `sudo port install python37 py37-pip py37-tkinter`
     - Otherwise, download [Miniconda](https://conda.io/miniconda.html) 
-- Linux or macOS are suggested. Windows is not well suited for use as a development environment, so if you’re currently using Windows, you will probably want to dual-boot into Linux (Ubuntu is a good default choice) or use a VM like the one provided here (see below).
+- Linux or macOS are suggested. For what we'll be doing, Windows is more difficult to set up as a development environment. Windows is not commonly used for modern development outside of a few specific areas (e.g. games), so users typically have issues with instructions that don't work on Windows, code that expects Unix or Linux behavior, etc. You will probably want to dual-boot into Linux (Ubuntu is a good default choice) or use a VM like the one provided here (see below) or even try using WSL if you're brave. It's almost certain that regardless of how you developed it, the server running your code in production will be Linux, so the sooner you get used to Linux the better off you'll be...
 
 ## Pipenv
 
