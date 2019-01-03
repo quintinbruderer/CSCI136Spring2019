@@ -145,6 +145,10 @@ pipenv sync
 
 In the `/vm` directory, there's a Vagrantfile that will set up an Ubuntu VM. It's not pleasant to work inside a VM, but if all else fails, install [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/) or another virtualization system and run `vagrant up && vagrant reload` to bring up a VM. It will take some time as it downloads a lot of packages.
 
+Once the GUI login screen has come up, log in with user `vagrant` and password `vagrant`.
+
+It'll be more convenient to use if you go into Settings and turn off the screen auto lock and set the `vagrant` user to auto log in. To do the latter, you have to authenticate as the `ubuntu` user, which means you have to know its password. As the `vagrant` user, you can set it to anything you like with `sudo passwd ubuntu`.
+
 # Jupyter
 
 Jupyter notebooks should only be used for little snippets of code for quick demos, not for more substantial development.
