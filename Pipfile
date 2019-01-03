@@ -2,6 +2,9 @@
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 
+[packages]
+jupyter = "==1.0.0"
+
 [requires]
 python_version = "3.7"
 

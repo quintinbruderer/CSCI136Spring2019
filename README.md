@@ -1,3 +1,14 @@
+# What's this?
+
+A starter project for students in University of Montana's CS 136.
+
+## Directory structure
+
+- `src`: Put your work here (homework, etc).
+- `booksite/examples`: Examples provided with the textbook
+- `booksite/stdlib`: Library code provided with the textbook. It should not be called "stdlib" as that is a title generally reserved for the library that is included with the language itself, but that's what the book calls it and it seemed even more confusing to have a different name than what the book uses.
+- `lecture-notebooks`: Jupyter notebooks with the examples created during the lectures.
+
 # Setup
 
 Install [pipenv](https://pipenv.readthedocs.io/en/latest/) (see below). Inside this project's directory, run:
@@ -95,3 +106,17 @@ pipenv sync
 # VM
 
 In the `/vm` directory, there's a Vagrantfile that will set up an Ubuntu VM. It's not pleasant to work inside a VM, but if all else fails, install [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/) or another virtualization system and run `vagrant up && vagrant reload` to bring up a VM. It will take some time as it downloads a lot of packages.
+
+# Jupyter
+
+Jupyter notebooks should only be used for little snippets of code for quick demos, not for more substantial development.
+
+Jupyter is a dependency in the `Pipfile`, and PyCharm knows how to run the Jupyter server, so open a `*.ipynb` file and run a cell. It will ask for an external Jupyter server URL. Click "Cancel", then click "Run Jupyter Notebook" in the warning message that pops up after that to have PyCharm run the server for you. (It will create a run configuration for you also.)
+
+If you want to run the serer manually:
+
+```
+PYTHONPATH=src:booksite/stdlib pipenv run jupyter notebook
+```
+
+Note the URL with the token that it outputs on startup and provide that to PyCharm when trying to run a notebook so that it can authenticate with the Jupyter server.
