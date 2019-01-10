@@ -23,6 +23,11 @@ Install Python 3.7.
     - Otherwise, download [Miniconda](https://conda.io/miniconda.html) 
 - Linux or macOS are suggested. For what we'll be doing, Windows is more difficult to set up as a development environment. Windows is not commonly used for modern development outside of a few specific areas (e.g. games), so users typically have issues with instructions that don't work on Windows, code that expects Unix or Linux behavior, etc. You will probably want to dual-boot into Linux (Ubuntu is a good default choice) or use a VM like the one provided here (see below) or even try using WSL if you're brave. It's almost certain that regardless of how you developed it, the server running your code in production will be Linux, so the sooner you get used to Linux the better off you'll be...
 
+## PyCharm
+
+- Install https://www.jetbrains.com/toolbox/app/ and make a JetBrains account, then use it to install PyCharm Community
+    - If you use your .edu email address, you’ll get access to all JetBrains tools: https://www.jetbrains.com/student/
+
 ## Pipenv
 
 See detailed instructions below under "Installing pipenv".
