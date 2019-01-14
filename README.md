@@ -45,7 +45,7 @@ This will create a directory called `cs136-template`, but that's just `git` defa
 Once inside the resulting directory, run:
 
 ```
-pipenv sync
+pipenv install
 ```
 
 Then, open the project in PyCharm and it should automatically use the python version specified via pipenv.
@@ -139,12 +139,6 @@ export PATH=$PATH:$HOME/.local/bin
 ```
 
 Once you've done that, open a new terminal to use your newly updated shell config.
-
-`cd` to this project's directory and run pipenv:
-
-```
-pipenv sync
-```
 
 # VM
 
