@@ -6,11 +6,10 @@ verify_ssl = true
 # dev tools
 jupyter = "==1.0.0"
 mypy = "==0.650"
-
 # for booksite
 pygame = "==1.9.4"
 numpy = "==1.15.4"
+ipython = "==5"
 
 [requires]
 python_version = "3.7"
-
