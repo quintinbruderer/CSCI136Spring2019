@@ -1,0 +1,14 @@
+A physics student gets unexpected results when using the code
+
+force = G * mass1 * mass2 / radius * radius
+
+to compute values according to the formula F = G m_1 m_2 / r^2. Explain the problem and correct the code.
+
+" When arithmetic operators have the same precedence, they are left associative "
+
+so the value of G * m1 * m2 are being divided by radius and then multiplied again. Rather, it should be divided by radius squared.
+
+
+
+force = (G * mass1 * mass2) / (radius * radius)
+                                radius ** 2

@@ -9,7 +9,9 @@ import sys
 # that name to standard output.
 
 stdio.write('Hi, ')
-stdio.write(sys.argv[1])
+stdio.write(sys.argv[1] +', ')
+stdio.write(sys.argv[2] +', and ')
+stdio.write(sys.argv[3])
 stdio.writeln('. How are you?')
 
 #-----------------------------------------------------------------------

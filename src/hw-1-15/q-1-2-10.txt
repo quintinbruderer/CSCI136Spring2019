@@ -1,0 +1,12 @@
+Does (math.sqrt(2) * math.sqrt(2) == 2) evaluate to True or False?
+
+
+
+False
+
+math.sqrt(2) = 1.4142135623730951
+multiply by itself = 2.0000000000000004
+
+floating point imprecision
+
+2 == math.sqrt (2 * 2) is yet true...thanks stackoverflow.

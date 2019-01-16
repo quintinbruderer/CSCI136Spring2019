@@ -1,0 +1,9 @@
+1.2.4
+Suppose that a and b are integers. Simplify this expression:
+
+
+(not (a < b) and not (a > b))
+
+not a greater than b and not a smaller than b
+
+a == b
